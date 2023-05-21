@@ -20,6 +20,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static java.util.function.Function.identity;
+
 @SpringBootApplication
 public class SpringBoot3ClientApplication {
 
@@ -67,10 +69,14 @@ class GraphqlController {
         }
         return map;
 */
+/*
         return customerList.stream().collect(Collectors.toMap(
            customer -> customer, // Function.identity(),
            customer -> new Profile(customer.id())
         ));
+*/
+
+        return customerList.stream().collect(Collectors.toMap(identity(), customer -> new Profile(customer.id())));
     }
 
 /*
