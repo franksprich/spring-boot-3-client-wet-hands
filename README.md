@@ -24,7 +24,7 @@ type Query {
 }
 ```
 
-Life query with [GraphiQL](http://localhost:9090/graphiql) it offers control spaceablility:
+Life query with [Localhost: GraphiQL](http://localhost:9090/graphiql) it offers control spaceablility:
 ```graphql
 {
   customers {
